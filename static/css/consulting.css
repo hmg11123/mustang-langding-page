@@ -1,0 +1,75 @@
+.consulting_wrapper {
+ width: 100%;
+}
+
+.consulting_title {
+ width: 169px;
+ margin: 408px 0 150px 0;
+ font-size: 30px;
+ border-bottom: 3px solid #707070;
+}
+
+.consulting_title_wrapper {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+}
+
+.consulting_box {
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: flex-start;
+}
+
+.consulting_input {
+ width: 300px;
+ height: 40px;
+ border-bottom: 3px solid #fff;
+ margin: 9px 0 25px 0;
+ color: #fff;
+}
+
+.consulting_textarea {
+ width: 300px;
+ height: 125px;
+ margin: 11px 0 0 0;
+ color: #fff;
+ background: none;
+ border: 3px solid #fff;
+ padding: 5.5px;
+ outline: none;
+}
+
+.consulting_input_title,
+.consulting_input_title_icon {
+ font-size: 20px;
+}
+
+.consulting_input_title_icon {
+ color: #ff0000;
+}
+
+.left_input_box {
+ margin-right: 18px;
+}
+.right_input_box {
+ margin-left: 18px;
+}
+
+.consulting_button {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+}
+
+.consulting_button input {
+ width: 200px;
+ height: 60px;
+ color: #fff;
+ background-color: #2e97cd;
+ border-radius: 50px;
+ font-size: 25px;
+ margin: 142px 0 125px 0;
+}

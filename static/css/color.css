@@ -1,0 +1,76 @@
+.color_wrapper {
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.color_title {
+ width: 62px;
+ font-size: 30px;
+ border-bottom: 3px solid #707070;
+ margin: 150px 0;
+}
+
+.color_img_wrapper {
+ width: 900px;
+ height: 395px;
+ background-color: white;
+ color: black;
+ margin: 0 0 91px 0;
+}
+
+.sketchfab-embed-wrapper {
+ width: 100%;
+ height: 100%;
+}
+.color_mustang_3d {
+ width: 100%;
+ height: 100%;
+}
+
+.color_tap_wrapper {
+ width: 100%;
+ height: 100px;
+ display: flex;
+ justify-content: center;
+}
+
+.color_tap {
+ width: 70px;
+ height: 70px;
+ border-radius: 100%;
+ border: 1px solid #ffffff;
+ margin: 0 8px;
+}
+
+.color_tap_1 {
+ background: linear-gradient(-45deg, #9d0905 50%, #ad2829 50%);
+}
+.color_tap_2 {
+ background: linear-gradient(-45deg, #fe7e0e 50%, #ff9032 50%);
+}
+.color_tap_3 {
+ background: linear-gradient(-45deg, #005893 50%, #296fa1 50%);
+}
+.color_tap_4 {
+ background: linear-gradient(-45deg, #589747 50%, #73c35f 50%);
+}
+.color_tap_5 {
+ background: linear-gradient(-45deg, #000000 50%, #262626 50%);
+}
+.color_tap_6 {
+ background: linear-gradient(-45deg, #5a5a5a 50%, #717171 50%);
+}
+.color_tap_7 {
+ background: linear-gradient(-45deg, #b3b8c2 50%, #bec3cb 50%);
+}
+.color_tap_8 {
+ background: linear-gradient(-45deg, #101a66 50%, #343a7f 50%);
+}
+.color_tap_9 {
+ background: linear-gradient(-45deg, #df1201 50%, #e22626 50%);
+}
+.color_tap_0 {
+ background: #fff;
+}

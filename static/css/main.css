@@ -1,0 +1,92 @@
+.main_body {
+ width: 100%;
+ height: 1050px;
+ background-image: url(https://firebasestorage.googleapis.com/v0/b/hmg-fileserver.appspot.com/o/MUSTANG%2Fmain%2Fmain_img.jpeg?alt=media&token=7d61b463-0bfd-4bea-b4dc-6d63c2b738e8);
+ background-repeat: none;
+ background-size: cover;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+}
+.main_body .main_haeder {
+ width: 100%;
+ display: flex;
+ justify-content: flex-start;
+}
+
+/* ================== text =================== */
+
+.main_body .main_text_1 {
+ margin: 110px 0 0 0;
+ font-size: 200px;
+ font-weight: 900;
+}
+.main_body .main_text_2 {
+ font-size: 60px;
+ font-weight: 900;
+ margin: 0 0 0 19px;
+}
+
+/* =================== logo  ====================*/
+
+.main_body .main_logo {
+ width: 150px;
+ height: 110.9px;
+ margin: 0 0 0 135px;
+}
+
+/* =================== wrapper ================= */
+
+.main_body .rswrapper {
+ width: 1350px;
+}
+
+.main_body .main_wrapper {
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+}
+
+.main_body .main_main_wrapper {
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+/* =================== icon ==================== */
+
+.main_body .icon {
+ width: 50px;
+ height: 50px;
+ margin: 395px 0 0 0;
+}
+
+.main_body .icon_body_1 {
+ margin: 0 0 0 73px;
+}
+
+.main_body .icon_body {
+ width: 100%;
+ height: 60px;
+ display: flex;
+ justify-content: center;
+}
+.main_body .icon_body_1,
+.main_body .icon_body_3 {
+ width: 40%;
+}
+
+.main_body .icon_body_2 {
+ width: 30%;
+ display: flex;
+ justify-content: center;
+}
+
+.main_body .icon_sortdown {
+ margin: 370px 0 44px 0;
+ width: 100px;
+ height: 100px;
+}
