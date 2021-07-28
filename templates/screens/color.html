@@ -1,61 +1,158 @@
 {% block content %}
+
 <div class="color_wrapper">
  <h2 class="color_title">color</h2>
- <div class="color_img_wrapper">
-  <div class="sketchfab-embed-wrapper">
-   <iframe
-    class="color_mustang_3d"
-    title="Ford Mustang GT 2020"
-    frameborder="0"
-    allowfullscreen
-    mozallowfullscreen="true"
-    webkitallowfullscreen="true"
-    allow="fullscreen; autoplay; vr"
-    xr-spatial-tracking
-    execution-while-out-of-viewport
-    execution-while-not-rendered
-    web-share
-    src="https://sketchfab.com/models/14e63217995e4d7ca6523e76ee205e53/embed"
-   >
-   </iframe>
-  </div>
-  <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4a4a4a">
-   <a
-    href="https://sketchfab.com/3d-models/ford-mustang-gt-2020-14e63217995e4d7ca6523e76ee205e53?utm_medium=embed&utm_campaign=share-popup&utm_content=14e63217995e4d7ca6523e76ee205e53"
-    target="_blank"
-    style="font-weight: bold; color: #1caad9"
-   >
-    Ford Mustang GT 2020
-   </a>
-   by
-   <a
-    href="https://sketchfab.com/zifir3d?utm_medium=embed&utm_campaign=share-popup&utm_content=14e63217995e4d7ca6523e76ee205e53"
-    target="_blank"
-    style="font-weight: bold; color: #1caad9"
-   >
-    zifir3d
-   </a>
-   on
-   <a
-    href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=14e63217995e4d7ca6523e76ee205e53"
-    target="_blank"
-    style="font-weight: bold; color: #1caad9"
-    >Sketchfab</a
-   >
-  </p>
- </div>
  <div class="color_tap_wrapper">
-  <input class="color_tap color_tap_1" type="button" />
-  <input class="color_tap color_tap_2" type="button" />
-  <input class="color_tap color_tap_3" type="button" />
-  <input class="color_tap color_tap_4" type="button" />
-  <input class="color_tap color_tap_5" type="button" />
-  <input class="color_tap color_tap_6" type="button" />
-  <input class="color_tap color_tap_7" type="button" />
-  <input class="color_tap color_tap_8" type="button" />
-  <input class="color_tap color_tap_9" type="button" />
-  <input class="color_tap color_tap_0" type="button" />
+  <!-- input -->
+  <input id="tab1" class="tab_btn_1" name="tab" type="radio" checked="checked" />
+  <input id="tab2" class="tab_btn_2" name="tab" type="radio" />
+  <input id="tab3" class="tab_btn_3" name="tab" type="radio" />
+  <input id="tab4" class="tab_btn_4" name="tab" type="radio" />
+  <input id="tab5" class="tab_btn_5" name="tab" type="radio" />
+  <input id="tab6" class="tab_btn_6" name="tab" type="radio" />
+  <input id="tab7" class="tab_btn_7" name="tab" type="radio" />
+  <input id="tab8" class="tab_btn_8" name="tab" type="radio" />
+  <input id="tab9" class="tab_btn_9" name="tab" type="radio" />
+  <input id="tab0" class="tab_btn_0" name="tab" type="radio" />
+  <!-- content -->
+  <div class="color_img_wrapper">
+   <div class="tab1_content tab_content">tab 1</div>
+   <div class="tab2_content tab_content">
+    <iframe
+     class="color_mustang_3d"
+     title="Ford Mustang GT 2020"
+     frameborder="0"
+     allowfullscreen
+     mozallowfullscreen="true"
+     webkitallowfullscreen="true"
+     allow="fullscreen; autoplay; vr"
+     xr-spatial-tracking
+     execution-while-out-of-viewport
+     execution-while-not-rendered
+     web-share
+     src="https://sketchfab.com/models/14e63217995e4d7ca6523e76ee205e53/embed"
+    >
+    </iframe>
+   </div>
+   <div class="tab3_content tab_content">tab 3</div>
+   <div class="tab4_content tab_content">tab 4</div>
+   <div class="tab5_content tab_content">tab 5</div>
+   <div class="tab6_content tab_content">tab 6</div>
+   <div class="tab7_content tab_content">tab 7</div>
+   <div class="tab8_content tab_content">tab 8</div>
+   <div class="tab9_content tab_content">tab 9</div>
+   <div class="tab0_content tab_content">tab 0</div>
+  </div>
+  <!-- label -->
+  <div class="color_tab_label">
+   <label for="tab1" class="color_tap color_tap_1">
+    <div class="color_tap_1_checked color_checked_circle"></div>
+   </label>
+   <label for="tab2" class="color_tap color_tap_2">
+    <div class="color_tap_2_checked color_checked_circle"></div>
+   </label>
+   <label for="tab3" class="color_tap color_tap_3">
+    <div class="color_tap_3_checked color_checked_circle"></div>
+   </label>
+   <label for="tab4" class="color_tap color_tap_4">
+    <div class="color_tap_4_checked color_checked_circle"></div>
+   </label>
+   <label for="tab5" class="color_tap color_tap_5">
+    <div class="color_tap_5_checked color_checked_circle"></div>
+   </label>
+   <label for="tab6" class="color_tap color_tap_6">
+    <div class="color_tap_6_checked color_checked_circle"></div>
+   </label>
+   <label for="tab7" class="color_tap color_tap_7">
+    <div class="color_tap_7_checked color_checked_circle"></div>
+   </label>
+   <label for="tab8" class="color_tap color_tap_8">
+    <div class="color_tap_8_checked color_checked_circle"></div>
+   </label>
+   <label for="tab9" class="color_tap color_tap_9">
+    <div class="color_tap_9_checked color_checked_circle"></div>
+   </label>
+   <label for="tab0" class="color_tap color_tap_0"> </label>
+  </div>
  </div>
 </div>
 
 {% endblock content %}
+
+<!-- <form aciton="/" method="POST"> -->
+<!-- <input class="color_tap color_tap_1" name="tab" id="tab" type="submit" value="1" />
+  <input class="color_tap color_tap_2" name="tab" id="tab" type="submit" value="2" />
+  <input class="color_tap color_tap_3" name="tab" id="tab" type="submit" value="3" />
+  <input class="color_tap color_tap_4" name="tab" id="tab" type="submit" value="4" />
+  <input class="color_tap color_tap_5" name="tab" id="tab" type="submit" value="5" />
+  <input class="color_tap color_tap_6" name="tab" id="tab" type="submit" value="6" />
+  <input class="color_tap color_tap_7" name="tab" id="tab" type="submit" value="7" />
+  <input class="color_tap color_tap_8" name="tab" id="tab" type="submit" value="8" />
+  <input class="color_tap color_tap_9" name="tab" id="tab" type="submit" value="9" />
+  <input class="color_tap color_tap_0" name="tab" id="tab" type="submit" value="0" /> -->
+<!-- </form> -->
+
+<!-- <script>
+  $("#tab").click(() => {
+   let tabTab = $("#tab").val();
+
+   const tabValue = {
+    tab: tabTab,
+   };
+   $.ajax({
+    type: "POST",
+    url: "/",
+    data: JSON.stringify(tabValue),
+    dataType: "JSON",
+    contentType: "application/json",
+    success: () => {
+     (data) => {
+      alert("성공! 데이터 값:" + data);
+     };
+    },
+    error: () => {
+     (requset, stauts, error) => {
+      alert("ajax 통신 실패");
+      alert(error);
+     };
+    },
+   });
+  });
+ </script> -->
+
+<!-- {% if tabValue == 1 %} {{tabValue}}
+
+ {% elif tabValue == 2 %} {{tabValue}}
+
+ {% elif tabValue == 3 %}
+
+ <iframe
+  class="color_mustang_3d"
+  title="Ford Mustang GT 2020"
+  frameborder="0"
+  allowfullscreen
+  mozallowfullscreen="true"
+  webkitallowfullscreen="true"
+  allow="fullscreen; autoplay; vr"
+  xr-spatial-tracking
+  execution-while-out-of-viewport
+  execution-while-not-rendered
+  web-share
+  src="https://sketchfab.com/models/14e63217995e4d7ca6523e76ee205e53/embed"
+ >
+ </iframe>
+ {% elif tabValue == 4 %} {{tabValue}}
+
+ {% elif tabValue == 5 %} {{tabValue}}
+
+ {% elif tabValue == 6 %} {{tabValue}}
+
+ {% elif tabValue == 7 %} {{tabValue}}
+
+ {% elif tabValue == 8 %} {{tabValue}}
+
+ {% elif tabValue == 9 %} {{tabValue}}
+
+ {% elif tabValue == 0 %} {{tabValue}}
+
+ {% endif %} -->

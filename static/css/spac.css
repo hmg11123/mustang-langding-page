@@ -47,21 +47,30 @@
  height: 387px;
 }
 
-.spac_input_wrapper {
+.spac_a_wrapper {
  width: 100%;
- height: 100px;
-
+ height: 100%;
  margin: 85px 0 0 0;
  border-radius: 50px;
  display: flex;
  justify-content: center;
 }
 
-.spac_input {
+.spac_a {
  width: 200px;
- height: 60px;
+ height: 50px;
  background-color: #2e97cd;
  color: #fff;
  border-radius: 50px;
  font-size: 25px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: 0.2s;
+}
+
+.spac_a:hover {
+ color: #2e97cd;
+ background-color: #fff;
+ box-shadow: 6px 6px 10px #2e97cd;
 }

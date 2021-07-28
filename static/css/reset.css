@@ -106,6 +106,12 @@ body {
  height: 4371px;
  background-color: #1c1c1c;
  color: white;
+ position: relative;
+ -ms-user-select: none;
+ -moz-user-select: -moz-none;
+ -khtml-user-select: none;
+ -webkit-user-select: none;
+ user-select: none;
 }
 ol,
 ul {
@@ -134,4 +140,16 @@ input {
 }
 textarea {
  resize: none;
+}
+a {
+ color: #fff;
+ text-decoration: none;
+ outline: none;
+}
+
+a:hover,
+a:active {
+ text-decoration: none;
+ color: none;
+ background-color: none;
 }

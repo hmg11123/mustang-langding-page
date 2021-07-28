@@ -1,3 +1,36 @@
+@keyframes motion {
+ 0% {
+  margin-top: 0px;
+ }
+ 100% {
+  margin-top: 8px;
+ }
+}
+-webkit-@keyframes motion {
+ 0% {
+  margin-top: 0px;
+ }
+ 100% {
+  margin-top: 8px;
+ }
+}
+-moz-@keyframes motion {
+ 0% {
+  margin-top: 0px;
+ }
+ 100% {
+  margin-top: 8px;
+ }
+}
+-ms-@keyframes motion {
+ 0% {
+  margin-top: 0px;
+ }
+ 100% {
+  margin-top: 8px;
+ }
+}
+
 .main_body {
  width: 100%;
  height: 1050px;
@@ -81,12 +114,21 @@
 
 .main_body .icon_body_2 {
  width: 30%;
+ margin: 350px;
  display: flex;
  justify-content: center;
 }
 
 .main_body .icon_sortdown {
  margin: 370px 0 44px 0;
- width: 100px;
- height: 100px;
+ width: 90px;
+ height: 90px;
+ animation: motion 0.5s linear 0s infinite alternate;
+ margin-top: 0;
+ -webkit-animation: motion 0.5s linear 0s infinite alternate;
+ margin-top: 0;
+ -moz-animation: motion 0.5s linear 0s infinite alternate;
+ margin-top: 0;
+ -ms-animation: motion 0.5s linear 0s infinite alternate;
+ margin-top: 0;
 }
