@@ -9,15 +9,17 @@
  width: 62px;
  font-size: 30px;
  border-bottom: 3px solid #707070;
- margin: 150px 0;
+ margin: 150px 0 50px 0;
 }
 
 .color_tap_wrapper .color_img_wrapper {
- width: 900px;
- height: 395px;
- background-color: white;
+ width: 1100px;
+ height: 395.09px;
  color: black;
  margin: 0 0 91px 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 .sketchfab-embed-wrapper {
@@ -34,7 +36,28 @@
  height: 100%;
  display: flex;
  flex-direction: column;
+ justify-content: center;
  align-items: center;
+}
+.color_img_wrapper .tab_content {
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.color_img_wrapper .tab_content img {
+ width: 1100px;
+ height: 395.09px;
+ /* width: 900px;
+ height: 395.09px; */
+ background-size: cover;
+}
+
+.color_img_wrapper .tab_content iframe {
+ width: 900px;
+ height: 395px;
 }
 
 .color_tap {
@@ -57,9 +80,10 @@
 .color_tap_wrapper .tab_btn_8:checked ~ .color_img_wrapper .tab8_content,
 .color_tap_wrapper .tab_btn_9:checked ~ .color_img_wrapper .tab9_content,
 .color_tap_wrapper .tab_btn_0:checked ~ .color_img_wrapper .tab0_content {
- display: block;
+ display: flex;
  width: 100%;
- height: 100%;
+ height: 50%;
+ justify-content: center;
 }
 .color_tap_wrapper input,
 .color_tap_wrapper .tab_content {

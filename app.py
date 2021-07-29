@@ -1,14 +1,21 @@
+from email import message
 from flask import Flask, render_template, request, url_for
+from flask_mail import Mail, Message
+from dotenv import load_dotenv
+import os
+import smtplib
+# import socket
+# socket.gethostbyname("")
 
+from email.utils import formataddr
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
-app = Flask(__name__, static_url_path='/static')
-
+app = Flask(__name__)
 
 @app.route("/")
-def index(tab=None):
-    return render_template("index.html", tab=tab)
-
-
+def index() :
+    return render_template("index.html")
 # @app.route("/", methods=['POST', 'GET'])
 # def color(num=None):
 #     if request.method == 'POST':
@@ -24,17 +31,91 @@ def index(tab=None):
 #         pass
 
 #     return render_template("./screens/color.html", num=temp, char1=temp1)
+
 @app.route("/", methods=['POST', 'GET'])
-def color(tab=None):
-    if request.method == 'POST':
-        temp = int(request.form['tab'])
+def send_email(name=None, mobile=None, email=None, bac=None, desc=None):
+    name = request.form["name"]
+    mobile = request.form["mobile"]
+    email = request.form["email"]
+    bac = request.form["bac"]
+    desc = request.form["desc"]
+    # msg = Message('Hello', sender=os.environ.get("MAIL_USERNAME"), recipients=[email])
+    
+    # msg.html = f"<h1>{name}님</h1>  <h2>전화번호: {mobile}<h2> <h2>소요예산: {bac}</h2> <br /> <br /> <br /> {desc}"
+    # with smtplib.SMTP(host="smtp.gamil.com", port=587) as app:
+    #     app.starttls()
+    #     app.login(os.environ.get("MAIL_USERNAME"),  os.environ.get("MAIL_PASSWORD"))
+    #     app.sendmail(email, os.environ.get("MAIL_USERNAME"), msg)
+    # mail.send(msg)
 
-        print(temp)
         
-    elif request.method == 'GET':
-        pass
+    # if request.method == 'POST':
+    print(name)
+    print(mobile)
+    print(email)
+    print(bac)
+    print(desc)
 
-    return render_template("index.html", tabValue=temp)
+    # msg = Message("Hello", sender=os.environ.get("MAIL_USERNAME"), recipients=[email])
+    # msg.html = f"<h1>{name}님</h1>  <h2>전화번호: {mobile}<h2> <h2>소요예산: {bac}</h2> <br /> <br /> <br /> {desc}"
+    # with smtplib.SMTP(host="smtp.gamil.com", port=587) as app:
+    #     app.starttls()
+    #     app.login(os.environ.get("MAIL_USERNAME"),  os.environ.get("MAIL_PASSWORD"))
+    #     app.sendmail(email, os.environ.get("MAIL_USERNAME"), msg)
+    # mail.send(msg)
+    # return True
+
+    from_addr = formataddr(('counselor', email))
+    to_addr = formataddr(('me', os.environ['MAIL_USERNAME']))
+    session = None
+
+    print("username : ", os.environ['MAIL_USERNAME'])
+    print("password : ", os.environ['MAIL_PASSWORD'])
+
+    try:
+        # SMTP 세션 생성
+        session = smtplib.SMTP(os.environ['MAIL_SERVER'], os.environ['MAIL_PORT'])
+        session.set_debuglevel(False)
+        # SMTP 계정 인증 설정
+        session.ehlo()
+        session.starttls()
+        session.login(os.environ['MAIL_USERNAME'], os.environ['MAIL_PASSWORD'])
+        # 메일 콘텐츠 설정
+
+        # 메일 송/수신 옵션 설정
+        message = MIMEMultipart("alternative")
+
+        message.set_charset('utf8')
+        message['From'] = from_addr
+        message['To'] = to_addr
+        message['Subject'] = 'mustang 상담'
+        # 메일 콘텐츠 - 내용
+        body = f'''
+        <p> 이름: {name} </p>
+        <p> 전화번호: {mobile} </p>
+        <p> 이메일: {email} </p>
+        <p> 소요예산: {bac} </p>
+        <br />
+        <hr />
+        <br />
+        내용: {desc}
+        '''
+        bodyPart = MIMEText(body, 'html', 'utf8')
+
+        message.attach( bodyPart )
+        # 메일 발송
+        session.sendmail(from_addr, to_addr, message.as_string())
+        print('성공했다!!!!!!!!!!')
+    except Exception as e:
+        print(e)
+    finally:
+        if session is not None:
+            session.quit()
+
+    # elif request.method == 'GET':
+    #     pass
+
+    return render_template("index.html")
 
 
 if __name__ == "__main__":

@@ -4,7 +4,7 @@
 
 .consulting_title {
  width: 169px;
- margin: 408px 0 150px 0;
+ margin: 150px 0 150px 0;
  font-size: 30px;
  border-bottom: 3px solid #707070;
 }
@@ -79,4 +79,8 @@
  color: #2e97cd;
  background-color: #fff;
  box-shadow: 6px 6px 10px #2e97cd;
+}
+
+.consulting_move_id {
+ margin: 350px 0 0 0;
 }

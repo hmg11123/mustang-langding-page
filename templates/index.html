@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/consulting.css')}}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css')}}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css')}}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css')}}" />
   <!-- jquery를 많이쓰면 페이지 로딩속도 느려짐 -->
   <!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
   <script
@@ -38,11 +39,12 @@
  <body>
   {% include './layouts/content.html' %}
   <!-- -->
-  {% include './layouts/footer.html' %}
+  {% include './layouts/footer.html' %} {% include './nav/nav.html' %}
   <!-- -->
   {% block content %}
-
-  <!---->
+  <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+   <!---->
+  </div>
   {% endblock content %}
 
   <!-- -->
@@ -51,4 +53,5 @@
   {% endblock footer %}
  </body>
  <!-- <script src="{{ url_for('static', filename='js/color.js') }}"></script> -->
+ <script src="{{ url_for('static', filename='js/moveLinkHandler.js') }}"></script>
 </html>

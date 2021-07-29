@@ -14,7 +14,6 @@
 
  text-align: center;
 }
-
 .footer_wrapper .footer_rswrapper {
  width: 1350px;
  height: 100%;
@@ -29,7 +28,16 @@
  cursor: pointer;
 }
 
-.footer_wrapper .footer_text {
+.footer_wrapper .footer_text_box {
  line-height: 20px;
  margin: 0 80px 0 0;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+}
+
+.footer_wrapper .footer_rswrapper .footer_text_box p {
+ width: 100%;
+ display: flex;
+ justify-content: flex-start;
 }
