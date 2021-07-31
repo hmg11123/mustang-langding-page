@@ -93,7 +93,7 @@
 .color_checked_circle {
  width: 65%;
  height: 65%;
- background-color: white;
+ /* background-color: white; */
  border-radius: 50px;
  position: absolute;
  margin: 11px 10px 10px 11px;
@@ -167,4 +167,34 @@
 }
 .color_tap_wrapper > .color_tab_label .color_tap_0 {
  background: #fff;
+}
+
+.color_tab_label {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+@media (max-width: 800px) {
+ /* .color_tap {
+  width: 60px;
+  height: 60px;
+ }
+ .color_checked_circle {
+  margin: 9px 10px 10px 9px;
+ } */
+ .color_tab_label {
+  flex-wrap: wrap;
+ }
+
+ .color_img_wrapper .tab_content img {
+  width: 900px;
+  height: 295.09px;
+  /* width: 900px;
+    height: 395.09px; */
+ }
+ .color_tap_wrapper .color_img_wrapper {
+  margin: 0 0 40px 0;
+ }
 }

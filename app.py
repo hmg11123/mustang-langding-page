@@ -65,21 +65,28 @@ def send_email(name=None, mobile=None, email=None, bac=None, desc=None):
     # mail.send(msg)
     # return True
 
+    mail_username = os.environ.get('MAIL_USERNAME')
+    mail_password = os.environ.get('MAIL_PASSWORD')
+    mail_port = int(os.environ.get('MAIL_PORT'))
+    mail_server = os.environ.get('MAIL_SERVER')
+
     from_addr = formataddr(('counselor', email))
-    to_addr = formataddr(('me', os.environ['MAIL_USERNAME']))
+    to_addr = formataddr(('me', mail_username))
     session = None
 
-    print("username : ", os.environ['MAIL_USERNAME'])
-    print("password : ", os.environ['MAIL_PASSWORD'])
+    print("username : ", mail_username)
+    print("password : ", mail_password)
+    print("username : ",  mail_port)
+    print("password : ", mail_server)
 
     try:
         # SMTP 세션 생성
-        session = smtplib.SMTP(os.environ['MAIL_SERVER'], os.environ['MAIL_PORT'])
+        session = smtplib.SMTP(mail_server, mail_port)
         session.set_debuglevel(False)
         # SMTP 계정 인증 설정
         session.ehlo()
         session.starttls()
-        session.login(os.environ['MAIL_USERNAME'], os.environ['MAIL_PASSWORD'])
+        session.login(mail_username, mail_password)
         # 메일 콘텐츠 설정
 
         # 메일 송/수신 옵션 설정
@@ -109,6 +116,12 @@ def send_email(name=None, mobile=None, email=None, bac=None, desc=None):
     except Exception as e:
         print(e)
     finally:
+        name=None
+        mobile=None
+        email=None
+        bac=None
+        desc=None
+                
         if session is not None:
             session.quit()
 

@@ -42,9 +42,7 @@
   {% include './layouts/footer.html' %} {% include './nav/nav.html' %}
   <!-- -->
   {% block content %}
-  <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-   <!---->
-  </div>
+  <!-- -->
   {% endblock content %}
 
   <!-- -->
@@ -53,5 +51,6 @@
   {% endblock footer %}
  </body>
  <!-- <script src="{{ url_for('static', filename='js/color.js') }}"></script> -->
- <script src="{{ url_for('static', filename='js/moveLinkHandler.js') }}"></script>
+ <script src="{{ url_for('static', filename='js/scrollLinkHandler.js') }}"></script>
+ <script src="{{ url_for('static', filename='js/navHandler.js') }}"></script>
 </html>
